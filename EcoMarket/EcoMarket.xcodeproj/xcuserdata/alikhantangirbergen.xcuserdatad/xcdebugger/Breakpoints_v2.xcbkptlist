@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EB35831D-DAAB-4F30-B784-189FF1BCEA23"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6610CA4C-9E91-465B-B468-330E12172DFE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EcoMarket/Views/ProductCategoryCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "category"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "6610CA4C-9E91-465B-B468-330E12172DFE - 14e7c4a810675588"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EcoMarket.ProductCategoryCollectionViewCell.category.didset : Swift.Optional&lt;EcoMarket.ProductCategory&gt;"
+                  moduleName = "EcoMarket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alikhantangirbergen/Desktop/iOS/UIKit/EcoMarket/EcoMarket/EcoMarket/Views/ProductCategoryCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "596">
+               </Location>
+               <Location
+                  uuid = "6610CA4C-9E91-465B-B468-330E12172DFE - 14e7c4a810675588"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EcoMarket.ProductCategoryCollectionViewCell.category.didset : Swift.Optional&lt;EcoMarket.ProductCategory&gt;"
+                  moduleName = "EcoMarket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alikhantangirbergen/Desktop/iOS/UIKit/EcoMarket/EcoMarket/EcoMarket/Views/ProductCategoryCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "412">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
