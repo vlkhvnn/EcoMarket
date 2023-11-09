@@ -1,5 +1,5 @@
 //
-//  OrderConfirmationViewController.swift
+//  ProductBottomSheetViewController.swift
 //  EcoMarket
 //
 //  Created by Alikhan Tangirbergen on 10.11.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OrderConfirmationViewController: UIViewController {
+class ProductBottomSheetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

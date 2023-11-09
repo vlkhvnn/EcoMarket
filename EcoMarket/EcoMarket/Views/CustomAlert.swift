@@ -1,13 +1,13 @@
 //
-//  CustomAlertVC.swift
+//  CustomAlert.swift
 //  EcoMarket
 //
-//  Created by Alikhan Tangirbergen on 09.11.2023.
+//  Created by Alikhan Tangirbergen on 10.11.2023.
 //
 
 import UIKit
 
-class CustomAlertVC: UITextField {
+class CustomAlert: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.

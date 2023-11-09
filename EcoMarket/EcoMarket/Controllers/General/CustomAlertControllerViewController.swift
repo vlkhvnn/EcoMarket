@@ -1,5 +1,5 @@
 //
-//  OrderConfirmationViewController.swift
+//  CustomAlertControllerViewController.swift
 //  EcoMarket
 //
 //  Created by Alikhan Tangirbergen on 10.11.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OrderConfirmationViewController: UIViewController {
+class CustomAlertControllerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

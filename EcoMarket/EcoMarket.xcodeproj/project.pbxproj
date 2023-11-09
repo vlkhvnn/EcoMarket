@@ -7,218 +7,105 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A670C882AF8046200D6CE1C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A670C872AF8046200D6CE1C /* Product.swift */; };
-		7A670C8A2AF804C800D6CE1C /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A670C892AF804C800D6CE1C /* OrderItem.swift */; };
-		7A670C8C2AF8058500D6CE1C /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A670C8B2AF8058500D6CE1C /* ProductListViewController.swift */; };
-		7A670C8E2AF8BB7700D6CE1C /* CategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A670C8D2AF8BB7700D6CE1C /* CategoryScroll.swift */; };
-		7A670C962AF9062800D6CE1C /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A670C952AF9062800D6CE1C /* ProductCollectionViewCell.swift */; };
-		7A670C982AF942C800D6CE1C /* ProductBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A670C972AF942C800D6CE1C /* ProductBottomSheetViewController.swift */; };
-		7A670C9A2AF94FFF00D6CE1C /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A670C992AF94FFF00D6CE1C /* Order.swift */; };
-		7A7F390F2AFB8D7B009C111F /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F390E2AFB8D7B009C111F /* CartService.swift */; };
-		7A7F39112AFBA5A1009C111F /* CartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F39102AFBA5A1009C111F /* CartCollectionViewCell.swift */; };
-		7A7F39132AFBA78D009C111F /* TrashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F39122AFBA78D009C111F /* TrashView.swift */; };
-		7A7F39152AFC06B9009C111F /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F39142AFC06B9009C111F /* OrderConfirmationViewController.swift */; };
-		7A7F39192AFC10F3009C111F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F39182AFC10F3009C111F /* CustomTextField.swift */; };
-		7A7F391D2AFC1F90009C111F /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F391C2AFC1F90009C111F /* CustomAlertViewController.swift */; };
-		7AA6ADDB2AF798A100FFBBA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6ADDA2AF798A100FFBBA8 /* AppDelegate.swift */; };
-		7AA6ADE42AF798A300FFBBA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AA6ADE32AF798A300FFBBA8 /* Assets.xcassets */; };
-		7AA6ADE72AF798A300FFBBA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA6ADE52AF798A300FFBBA8 /* LaunchScreen.storyboard */; };
-		7AA6ADF42AF799FA00FFBBA8 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6ADF32AF799FA00FFBBA8 /* MainTabBarViewController.swift */; };
-		7AA6ADF82AF79ACE00FFBBA8 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6ADF72AF79ACE00FFBBA8 /* CartViewController.swift */; };
-		7AA6ADFA2AF79AD600FFBBA8 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6ADF92AF79AD600FFBBA8 /* HistoryViewController.swift */; };
-		7AA6ADFD2AF79AE400FFBBA8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6ADFC2AF79AE400FFBBA8 /* InfoViewController.swift */; };
-		7AA6ADFF2AF79F5200FFBBA8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6ADFE2AF79F5200FFBBA8 /* MainViewController.swift */; };
-		7AA6AE022AF79FC800FFBBA8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA6AE012AF79FC800FFBBA8 /* SnapKit */; };
-		7AA6AE042AF79FC800FFBBA8 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA6AE032AF79FC800FFBBA8 /* SnapKit-Dynamic */; };
-		7AA6AE072AF7A0A000FFBBA8 /* ProductCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6AE062AF7A0A000FFBBA8 /* ProductCategoryCollectionViewCell.swift */; };
-		7AA6AE0A2AF7A0C700FFBBA8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6AE092AF7A0C700FFBBA8 /* APIService.swift */; };
-		7AA6AE0D2AF7A0F900FFBBA8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA6AE0C2AF7A0F900FFBBA8 /* Alamofire */; };
-		7AA6AE102AF7A22000FFBBA8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA6AE0F2AF7A22000FFBBA8 /* Kingfisher */; };
-		7AA6AE122AF7A3D000FFBBA8 /* ProductCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6AE112AF7A3D000FFBBA8 /* ProductCategory.swift */; };
+		7A810EB12AFD6F9400121F4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A810EB02AFD6F9400121F4B /* AppDelegate.swift */; };
+		7A810EB32AFD6F9400121F4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A810EB22AFD6F9400121F4B /* SceneDelegate.swift */; };
+		7A810EB52AFD6F9400121F4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A810EB42AFD6F9400121F4B /* ViewController.swift */; };
+		7A810EB82AFD6F9400121F4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A810EB62AFD6F9400121F4B /* Main.storyboard */; };
+		7A810EBB2AFD6F9400121F4B /* EcoMarket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A810EB92AFD6F9400121F4B /* EcoMarket.xcdatamodeld */; };
+		7A810EBD2AFD6F9600121F4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A810EBC2AFD6F9600121F4B /* Assets.xcassets */; };
+		7A810EC02AFD6F9600121F4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A810EBE2AFD6F9600121F4B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7A670C872AF8046200D6CE1C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		7A670C892AF804C800D6CE1C /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
-		7A670C8B2AF8058500D6CE1C /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
-		7A670C8D2AF8BB7700D6CE1C /* CategoryScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryScroll.swift; sourceTree = "<group>"; };
-		7A670C952AF9062800D6CE1C /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
-		7A670C972AF942C800D6CE1C /* ProductBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductBottomSheetViewController.swift; path = EcoMarket/Controllers/ProductBottomSheetViewController.swift; sourceTree = SOURCE_ROOT; };
-		7A670C992AF94FFF00D6CE1C /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		7A7F390E2AFB8D7B009C111F /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
-		7A7F39102AFBA5A1009C111F /* CartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCollectionViewCell.swift; sourceTree = "<group>"; };
-		7A7F39122AFBA78D009C111F /* TrashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashView.swift; sourceTree = "<group>"; };
-		7A7F39142AFC06B9009C111F /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
-		7A7F39182AFC10F3009C111F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		7A7F391C2AFC1F90009C111F /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
-		7AA6ADD72AF798A100FFBBA8 /* EcoMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AA6ADDA2AF798A100FFBBA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7AA6ADE32AF798A300FFBBA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7AA6ADE62AF798A300FFBBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7AA6ADE82AF798A300FFBBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7AA6ADF32AF799FA00FFBBA8 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		7AA6ADF72AF79ACE00FFBBA8 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		7AA6ADF92AF79AD600FFBBA8 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		7AA6ADFC2AF79AE400FFBBA8 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		7AA6ADFE2AF79F5200FFBBA8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		7AA6AE062AF7A0A000FFBBA8 /* ProductCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		7AA6AE092AF7A0C700FFBBA8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		7AA6AE112AF7A3D000FFBBA8 /* ProductCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategory.swift; sourceTree = "<group>"; };
+		7A810EAD2AFD6F9400121F4B /* EcoMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A810EB02AFD6F9400121F4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7A810EB22AFD6F9400121F4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7A810EB42AFD6F9400121F4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A810EB72AFD6F9400121F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A810EBA2AFD6F9400121F4B /* EcoMarket.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EcoMarket.xcdatamodel; sourceTree = "<group>"; };
+		7A810EBC2AFD6F9600121F4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A810EBF2AFD6F9600121F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A810EC12AFD6F9600121F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7AA6ADD42AF798A100FFBBA8 /* Frameworks */ = {
+		7A810EAA2AFD6F9400121F4B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AA6AE102AF7A22000FFBBA8 /* Kingfisher in Frameworks */,
-				7AA6AE0D2AF7A0F900FFBBA8 /* Alamofire in Frameworks */,
-				7AA6AE022AF79FC800FFBBA8 /* SnapKit in Frameworks */,
-				7AA6AE042AF79FC800FFBBA8 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7AA6ADCE2AF798A100FFBBA8 = {
+		7A810EA42AFD6F9400121F4B = {
 			isa = PBXGroup;
 			children = (
-				7AA6ADD92AF798A100FFBBA8 /* EcoMarket */,
-				7AA6ADD82AF798A100FFBBA8 /* Products */,
+				7A810EAF2AFD6F9400121F4B /* EcoMarket */,
+				7A810EAE2AFD6F9400121F4B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7AA6ADD82AF798A100FFBBA8 /* Products */ = {
+		7A810EAE2AFD6F9400121F4B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7AA6ADD72AF798A100FFBBA8 /* EcoMarket.app */,
+				7A810EAD2AFD6F9400121F4B /* EcoMarket.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7AA6ADD92AF798A100FFBBA8 /* EcoMarket */ = {
+		7A810EAF2AFD6F9400121F4B /* EcoMarket */ = {
 			isa = PBXGroup;
 			children = (
-				7AA6ADDA2AF798A100FFBBA8 /* AppDelegate.swift */,
-				7AA6AE082AF7A0B800FFBBA8 /* Services */,
-				7AA6ADF02AF799D300FFBBA8 /* Views */,
-				7AA6ADEF2AF799CF00FFBBA8 /* Models */,
-				7AA6ADEE2AF799C600FFBBA8 /* Controllers */,
-				7AA6ADE32AF798A300FFBBA8 /* Assets.xcassets */,
-				7AA6ADE52AF798A300FFBBA8 /* LaunchScreen.storyboard */,
-				7AA6ADE82AF798A300FFBBA8 /* Info.plist */,
+				7A810EB02AFD6F9400121F4B /* AppDelegate.swift */,
+				7A810EB22AFD6F9400121F4B /* SceneDelegate.swift */,
+				7A810EB42AFD6F9400121F4B /* ViewController.swift */,
+				7A810EB62AFD6F9400121F4B /* Main.storyboard */,
+				7A810EBC2AFD6F9600121F4B /* Assets.xcassets */,
+				7A810EBE2AFD6F9600121F4B /* LaunchScreen.storyboard */,
+				7A810EC12AFD6F9600121F4B /* Info.plist */,
+				7A810EB92AFD6F9400121F4B /* EcoMarket.xcdatamodeld */,
 			);
 			path = EcoMarket;
-			sourceTree = "<group>";
-		};
-		7AA6ADEE2AF799C600FFBBA8 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				7AA6ADF22AF799E300FFBBA8 /* Core */,
-				7AA6ADF12AF799DE00FFBBA8 /* General */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		7AA6ADEF2AF799CF00FFBBA8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				7AA6AE112AF7A3D000FFBBA8 /* ProductCategory.swift */,
-				7A670C872AF8046200D6CE1C /* Product.swift */,
-				7A670C892AF804C800D6CE1C /* OrderItem.swift */,
-				7A670C992AF94FFF00D6CE1C /* Order.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		7AA6ADF02AF799D300FFBBA8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				7AA6AE062AF7A0A000FFBBA8 /* ProductCategoryCollectionViewCell.swift */,
-				7A670C952AF9062800D6CE1C /* ProductCollectionViewCell.swift */,
-				7A7F39102AFBA5A1009C111F /* CartCollectionViewCell.swift */,
-				7A670C8D2AF8BB7700D6CE1C /* CategoryScroll.swift */,
-				7A7F39182AFC10F3009C111F /* CustomTextField.swift */,
-				7A7F39122AFBA78D009C111F /* TrashView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		7AA6ADF12AF799DE00FFBBA8 /* General */ = {
-			isa = PBXGroup;
-			children = (
-				7A670C8B2AF8058500D6CE1C /* ProductListViewController.swift */,
-				7A670C972AF942C800D6CE1C /* ProductBottomSheetViewController.swift */,
-				7A7F39142AFC06B9009C111F /* OrderConfirmationViewController.swift */,
-				7A7F391C2AFC1F90009C111F /* CustomAlertViewController.swift */,
-			);
-			path = General;
-			sourceTree = "<group>";
-		};
-		7AA6ADF22AF799E300FFBBA8 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				7AA6ADF32AF799FA00FFBBA8 /* MainTabBarViewController.swift */,
-				7AA6ADFE2AF79F5200FFBBA8 /* MainViewController.swift */,
-				7AA6ADF72AF79ACE00FFBBA8 /* CartViewController.swift */,
-				7AA6ADF92AF79AD600FFBBA8 /* HistoryViewController.swift */,
-				7AA6ADFC2AF79AE400FFBBA8 /* InfoViewController.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		7AA6AE082AF7A0B800FFBBA8 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				7AA6AE092AF7A0C700FFBBA8 /* APIService.swift */,
-				7A7F390E2AFB8D7B009C111F /* CartService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7AA6ADD62AF798A100FFBBA8 /* EcoMarket */ = {
+		7A810EAC2AFD6F9400121F4B /* EcoMarket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7AA6ADEB2AF798A300FFBBA8 /* Build configuration list for PBXNativeTarget "EcoMarket" */;
+			buildConfigurationList = 7A810EC42AFD6F9600121F4B /* Build configuration list for PBXNativeTarget "EcoMarket" */;
 			buildPhases = (
-				7AA6ADD32AF798A100FFBBA8 /* Sources */,
-				7AA6ADD42AF798A100FFBBA8 /* Frameworks */,
-				7AA6ADD52AF798A100FFBBA8 /* Resources */,
+				7A810EA92AFD6F9400121F4B /* Sources */,
+				7A810EAA2AFD6F9400121F4B /* Frameworks */,
+				7A810EAB2AFD6F9400121F4B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = EcoMarket;
-			packageProductDependencies = (
-				7AA6AE012AF79FC800FFBBA8 /* SnapKit */,
-				7AA6AE032AF79FC800FFBBA8 /* SnapKit-Dynamic */,
-				7AA6AE0C2AF7A0F900FFBBA8 /* Alamofire */,
-				7AA6AE0F2AF7A22000FFBBA8 /* Kingfisher */,
-			);
 			productName = EcoMarket;
-			productReference = 7AA6ADD72AF798A100FFBBA8 /* EcoMarket.app */;
+			productReference = 7A810EAD2AFD6F9400121F4B /* EcoMarket.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7AA6ADCF2AF798A100FFBBA8 /* Project object */ = {
+		7A810EA52AFD6F9400121F4B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					7AA6ADD62AF798A100FFBBA8 = {
+					7A810EAC2AFD6F9400121F4B = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = 7AA6ADD22AF798A100FFBBA8 /* Build configuration list for PBXProject "EcoMarket" */;
+			buildConfigurationList = 7A810EA82AFD6F9400121F4B /* Build configuration list for PBXProject "EcoMarket" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -226,72 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 7AA6ADCE2AF798A100FFBBA8;
-			packageReferences = (
-				7AA6AE002AF79FC800FFBBA8 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				7AA6AE0B2AF7A0F900FFBBA8 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				7AA6AE0E2AF7A22000FFBBA8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				7A7F39162AFC0FDF009C111F /* XCRemoteSwiftPackageReference "AnimatedTextInput" */,
-				7A7F39172AFC1054009C111F /* XCRemoteSwiftPackageReference "UnderLineTextField" */,
-			);
-			productRefGroup = 7AA6ADD82AF798A100FFBBA8 /* Products */;
+			mainGroup = 7A810EA42AFD6F9400121F4B;
+			productRefGroup = 7A810EAE2AFD6F9400121F4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7AA6ADD62AF798A100FFBBA8 /* EcoMarket */,
+				7A810EAC2AFD6F9400121F4B /* EcoMarket */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7AA6ADD52AF798A100FFBBA8 /* Resources */ = {
+		7A810EAB2AFD6F9400121F4B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AA6ADE72AF798A300FFBBA8 /* LaunchScreen.storyboard in Resources */,
-				7AA6ADE42AF798A300FFBBA8 /* Assets.xcassets in Resources */,
+				7A810EC02AFD6F9600121F4B /* LaunchScreen.storyboard in Resources */,
+				7A810EBD2AFD6F9600121F4B /* Assets.xcassets in Resources */,
+				7A810EB82AFD6F9400121F4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7AA6ADD32AF798A100FFBBA8 /* Sources */ = {
+		7A810EA92AFD6F9400121F4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A7F39152AFC06B9009C111F /* OrderConfirmationViewController.swift in Sources */,
-				7A670C8E2AF8BB7700D6CE1C /* CategoryScroll.swift in Sources */,
-				7AA6AE072AF7A0A000FFBBA8 /* ProductCategoryCollectionViewCell.swift in Sources */,
-				7A670C9A2AF94FFF00D6CE1C /* Order.swift in Sources */,
-				7A7F390F2AFB8D7B009C111F /* CartService.swift in Sources */,
-				7AA6ADFF2AF79F5200FFBBA8 /* MainViewController.swift in Sources */,
-				7A7F39112AFBA5A1009C111F /* CartCollectionViewCell.swift in Sources */,
-				7A7F39132AFBA78D009C111F /* TrashView.swift in Sources */,
-				7A7F391D2AFC1F90009C111F /* CustomAlertViewController.swift in Sources */,
-				7AA6ADF42AF799FA00FFBBA8 /* MainTabBarViewController.swift in Sources */,
-				7A670C982AF942C800D6CE1C /* ProductBottomSheetViewController.swift in Sources */,
-				7AA6ADF82AF79ACE00FFBBA8 /* CartViewController.swift in Sources */,
-				7A670C8A2AF804C800D6CE1C /* OrderItem.swift in Sources */,
-				7A670C882AF8046200D6CE1C /* Product.swift in Sources */,
-				7A670C962AF9062800D6CE1C /* ProductCollectionViewCell.swift in Sources */,
-				7A7F39192AFC10F3009C111F /* CustomTextField.swift in Sources */,
-				7AA6AE122AF7A3D000FFBBA8 /* ProductCategory.swift in Sources */,
-				7AA6ADFD2AF79AE400FFBBA8 /* InfoViewController.swift in Sources */,
-				7AA6ADFA2AF79AD600FFBBA8 /* HistoryViewController.swift in Sources */,
-				7AA6ADDB2AF798A100FFBBA8 /* AppDelegate.swift in Sources */,
-				7A670C8C2AF8058500D6CE1C /* ProductListViewController.swift in Sources */,
-				7AA6AE0A2AF7A0C700FFBBA8 /* APIService.swift in Sources */,
+				7A810EB52AFD6F9400121F4B /* ViewController.swift in Sources */,
+				7A810EBB2AFD6F9400121F4B /* EcoMarket.xcdatamodeld in Sources */,
+				7A810EB12AFD6F9400121F4B /* AppDelegate.swift in Sources */,
+				7A810EB32AFD6F9400121F4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7AA6ADE52AF798A300FFBBA8 /* LaunchScreen.storyboard */ = {
+		7A810EB62AFD6F9400121F4B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7AA6ADE62AF798A300FFBBA8 /* Base */,
+				7A810EB72AFD6F9400121F4B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7A810EBE2AFD6F9600121F4B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A810EBF2AFD6F9600121F4B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -299,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7AA6ADE92AF798A300FFBBA8 /* Debug */ = {
+		7A810EC22AFD6F9600121F4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -362,7 +233,7 @@
 			};
 			name = Debug;
 		};
-		7AA6ADEA2AF798A300FFBBA8 /* Release */ = {
+		7A810EC32AFD6F9600121F4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -418,7 +289,7 @@
 			};
 			name = Release;
 		};
-		7AA6ADEC2AF798A300FFBBA8 /* Debug */ = {
+		7A810EC52AFD6F9600121F4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -430,6 +301,7 @@
 				INFOPLIST_FILE = EcoMarket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -445,7 +317,7 @@
 			};
 			name = Debug;
 		};
-		7AA6ADED2AF798A300FFBBA8 /* Release */ = {
+		7A810EC62AFD6F9600121F4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -457,6 +329,7 @@
 				INFOPLIST_FILE = EcoMarket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,91 +348,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7AA6ADD22AF798A100FFBBA8 /* Build configuration list for PBXProject "EcoMarket" */ = {
+		7A810EA82AFD6F9400121F4B /* Build configuration list for PBXProject "EcoMarket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7AA6ADE92AF798A300FFBBA8 /* Debug */,
-				7AA6ADEA2AF798A300FFBBA8 /* Release */,
+				7A810EC22AFD6F9600121F4B /* Debug */,
+				7A810EC32AFD6F9600121F4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7AA6ADEB2AF798A300FFBBA8 /* Build configuration list for PBXNativeTarget "EcoMarket" */ = {
+		7A810EC42AFD6F9600121F4B /* Build configuration list for PBXNativeTarget "EcoMarket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7AA6ADEC2AF798A300FFBBA8 /* Debug */,
-				7AA6ADED2AF798A300FFBBA8 /* Release */,
+				7A810EC52AFD6F9600121F4B /* Debug */,
+				7A810EC62AFD6F9600121F4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		7A7F39162AFC0FDF009C111F /* XCRemoteSwiftPackageReference "AnimatedTextInput" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jobandtalent/AnimatedTextInput";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.5;
-			};
+/* Begin XCVersionGroup section */
+		7A810EB92AFD6F9400121F4B /* EcoMarket.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7A810EBA2AFD6F9400121F4B /* EcoMarket.xcdatamodel */,
+			);
+			currentVersion = 7A810EBA2AFD6F9400121F4B /* EcoMarket.xcdatamodel */;
+			path = EcoMarket.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
 		};
-		7A7F39172AFC1054009C111F /* XCRemoteSwiftPackageReference "UnderLineTextField" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mohammadalijf/UnderLineTextField";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.0;
-			};
-		};
-		7AA6AE002AF79FC800FFBBA8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.6.0;
-			};
-		};
-		7AA6AE0B2AF7A0F900FFBBA8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.8.1;
-			};
-		};
-		7AA6AE0E2AF7A22000FFBBA8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.10.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		7AA6AE012AF79FC800FFBBA8 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7AA6AE002AF79FC800FFBBA8 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		7AA6AE032AF79FC800FFBBA8 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7AA6AE002AF79FC800FFBBA8 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-		7AA6AE0C2AF7A0F900FFBBA8 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7AA6AE0B2AF7A0F900FFBBA8 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		7AA6AE0F2AF7A22000FFBBA8 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7AA6AE0E2AF7A22000FFBBA8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-/* End XCSwiftPackageProductDependency section */
+/* End XCVersionGroup section */
 	};
-	rootObject = 7AA6ADCF2AF798A100FFBBA8 /* Project object */;
+	rootObject = 7A810EA52AFD6F9400121F4B /* Project object */;
 }

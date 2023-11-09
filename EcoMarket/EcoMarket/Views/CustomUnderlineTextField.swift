@@ -1,5 +1,5 @@
 //
-//  TrashView.swift
+//  CustomUnderlineTextField.swift
 //  EcoMarket
 //
 //  Created by Alikhan Tangirbergen on 10.11.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TrashView: UIButton {
+class CustomUnderlineTextField: UITextField {
 
     /*
     // Only override draw() if you perform custom drawing.

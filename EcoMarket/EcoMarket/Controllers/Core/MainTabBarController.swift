@@ -1,5 +1,5 @@
 //
-//  OrderConfirmationViewController.swift
+//  MainTabBarController.swift
 //  EcoMarket
 //
 //  Created by Alikhan Tangirbergen on 10.11.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OrderConfirmationViewController: UIViewController {
+class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
