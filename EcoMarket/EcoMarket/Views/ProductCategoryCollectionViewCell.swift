@@ -9,7 +9,9 @@ import UIKit
 import Kingfisher
 
 class ProductCategoryCollectionViewCell: UICollectionViewCell {
+    
     static let identifier = "ProductCategoryCollectionViewCell"
+    
     
     public var category : ProductCategory? {
         didSet {
@@ -51,9 +53,8 @@ class ProductCategoryCollectionViewCell: UICollectionViewCell {
     private func setUI() {
         self.backgroundColor = .white
         [imageView, imageOverlay, label].forEach { self.addSubview($0) }
-        self.layer.cornerRadius = 12
         applyConstraints()
-        
+        self.isUserInteractionEnabled = true
     }
     
     private func applyConstraints() {

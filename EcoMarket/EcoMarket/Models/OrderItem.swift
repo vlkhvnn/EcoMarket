@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct OrderItem : Codable {
+    var product : Int
+    var quantity : Int
+}

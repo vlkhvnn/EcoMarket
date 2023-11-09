@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
     
     private var productCategories = [ProductCategory]()
     
-    let sectionInsets = UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
+    let sectionInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     
     private let collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -20,17 +20,24 @@ class MainViewController: UIViewController {
         return newCollectionView
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = true
+    private let titleLabel : UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = "Эко Маркет"
         titleLabel.font = .systemFont(ofSize: 24, weight: .bold)
         titleLabel.sizeToFit()
         titleLabel.textAlignment = .center
-        navigationItem.titleView = titleLabel
+        return titleLabel
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
         setUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     private func setUI() {
@@ -40,6 +47,9 @@ class MainViewController: UIViewController {
         collectionView.register(ProductCategoryCollectionViewCell.self, forCellWithReuseIdentifier: ProductCategoryCollectionViewCell.identifier)
         getCategories()
         applyConstraints()
+        navigationItem.titleView = titleLabel
+        navigationItem.backButtonTitle = ""
+        view.isUserInteractionEnabled = true
     }
     
     private func getCategories() {
@@ -52,7 +62,7 @@ class MainViewController: UIViewController {
     
     private func applyConstraints() {
         collectionView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
+            make.top.equalToSuperview().offset(16)
             make.bottom.equalToSuperview()
             make.left.equalToSuperview()
             make.right.equalToSuperview()
@@ -74,6 +84,16 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
         cell.layer.masksToBounds = true
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let category = productCategories[indexPath.row]
+        let vc = ProductListViewController()
+        vc.category = category
+        print("delegate")
+        DispatchQueue.main.async { [weak self] in
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
@@ -81,7 +101,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         let paddingSpace = sectionInsets.left + sectionInsets.right + 11
         let availableWidth = collectionView.bounds.width - paddingSpace
         let widthPerItem = availableWidth / 2
-        return CGSize(width: widthPerItem, height: 180)
+        return CGSize(width: widthPerItem, height: widthPerItem + 20)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -91,5 +111,4 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 11
     }
-    
 }

@@ -7,14 +7,38 @@
 
 import UIKit
 
-class TrashView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+class TrashView : UIButton {
+    
+    private let trashImageView : UIImageView = {
+       let img = UIImageView()
+        img.image = UIImage(systemName: "trash")
+        img.tintColor = .red
+        return img
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUI()
     }
-    */
-
+    
+    private func setUI() {
+        self.addSubview(trashImageView)
+        self.backgroundColor = .white
+        self.layer.cornerRadius = 4
+        applyConstraints()
+    }
+    
+    private func applyConstraints() {
+        trashImageView.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(4)
+            make.right.equalToSuperview().offset(-4)
+            make.top.equalToSuperview().offset(4)
+            make.bottom.equalToSuperview().offset(-4)
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
+    
 }

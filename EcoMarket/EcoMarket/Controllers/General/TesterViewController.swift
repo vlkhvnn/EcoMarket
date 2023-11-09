@@ -1,29 +1,43 @@
-//
-//  TesterViewController.swift
-//  EcoMarket
-//
-//  Created by Alikhan Tangirbergen on 06.11.2023.
-//
-
 import UIKit
+import SnapKit
 
-class TesterViewController: UIViewController {
-
+class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Create a UIScrollView
+        let scrollView = UIScrollView()
+        scrollView.backgroundColor = .gray
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(scrollView)
+
+        scrollView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+
+        // Create a UIStackView to hold content horizontally
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 8
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+
+        // Add content (labels) to the stack view
+        for i in 0..<10 {
+            let label = UILabel()
+            label.text = "Item \(i+1)"
+            label.textAlignment = .center
+            label.backgroundColor = .blue
+            label.widthAnchor.constraint(equalToConstant: 200).isActive = true
+            stackView.addArrangedSubview(label)
+        }
+
+        scrollView.addSubview(stackView)
+
+        stackView.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(scrollView)
+            make.width.equalTo(220 * 10) // Adjust the width as needed
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
