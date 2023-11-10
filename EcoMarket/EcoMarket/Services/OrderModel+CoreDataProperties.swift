@@ -11,11 +11,12 @@ import CoreData
 
 
 extension OrderModel {
+
     @nonobjc public class func fetchRequest() -> NSFetchRequest<OrderModel> {
         return NSFetchRequest<OrderModel>(entityName: "OrderModel")
     }
 
-    @NSManaged public var products: [ProductModel]?
+    @NSManaged public var products: [Product]?
     @NSManaged public var order_number: Int64
     @NSManaged public var phone_number: String?
     @NSManaged public var address: String?
