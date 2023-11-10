@@ -1,5 +1,5 @@
 //
-//  TrashView.swift
+//  CustomInfo.swift
 //  EcoMarket
 //
 //  Created by Alikhan Tangirbergen on 10.11.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TrashView: UIView {
+class CustomInfo: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
