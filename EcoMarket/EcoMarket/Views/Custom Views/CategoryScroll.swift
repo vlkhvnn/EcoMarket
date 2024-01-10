@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoryScroll: UIButton {
+final class CategoryScroll: UIButton {
     
     public var productCategory : ProductCategory? {
         didSet {
@@ -35,21 +35,15 @@ class CategoryScroll: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-
         label.sizeToFit() // Adjust label size based on its content
-
         let labelWidth = label.frame.size.width
         let viewWidth = labelWidth + 24 // 24 pixels added to the label width
-
         frame.size = CGSize(width: viewWidth, height: 28)
-
-        let centerX = viewWidth / 2
         let centerY = frame.height / 2
-
         label.frame = CGRect(x: (viewWidth - labelWidth) / 2, y: centerY - (label.frame.size.height / 2), width: labelWidth, height: label.frame.size.height)
     }
     
     required init?(coder: NSCoder) {
-        fatalError()
+        super.init(coder: coder)
     }
 }

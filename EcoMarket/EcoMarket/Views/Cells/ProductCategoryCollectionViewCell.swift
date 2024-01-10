@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class ProductCategoryCollectionViewCell: UICollectionViewCell {
+final class ProductCategoryCollectionViewCell: UICollectionViewCell {
     static let identifier = "ProductCategoryCollectionViewCell"
     public var category : ProductCategory? {
         didSet {
@@ -44,7 +44,7 @@ class ProductCategoryCollectionViewCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
-        fatalError()
+        super.init(coder: coder)
     }
     
     private func setUI() {
@@ -56,18 +56,17 @@ class ProductCategoryCollectionViewCell: UICollectionViewCell {
     
     private func applyConstraints() {
         
-        imageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        imageView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
 
-        imageOverlay.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        imageOverlay.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
 
-        label.snp.makeConstraints { make in
-            make.left.equalTo(imageView.snp.left).offset(12)
-            make.bottom.equalTo(imageView.snp.bottom).offset(-12)
-            make.right.equalToSuperview().offset(-12)
+        label.snp.makeConstraints {
+            $0.left.bottom.equalTo(imageView).inset(12)
+            $0.right.equalToSuperview().offset(-12)
         }
     }
     

@@ -1,6 +1,6 @@
 import UIKit
 
-class CustomUnderlineTextField: UITextField {
+final class CustomUnderlineTextField: UITextField {
     
     public var placeh : String? {
         didSet {

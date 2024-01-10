@@ -7,14 +7,14 @@
 
 import UIKit
 
-class OrderCollectionViewCell: UICollectionViewCell {
+final class OrderCollectionViewCell: UICollectionViewCell {
     static let identifier = "OrderCollectionViewCell"
     
     var order : OrderModel? {
         didSet {
             guard let order = order else {return}
             numberLabel.text = "Заказ №\(order.order_number)"
-            priceLabel.text = "\(order.total_amount)"
+            priceLabel.text = "\(order.total_amount) тг"
             timeLabel.text = "\(order.created_at!.formatted())"
         }
     }
@@ -22,7 +22,7 @@ class OrderCollectionViewCell: UICollectionViewCell {
     private let circle : UIView = {
         let view = UIView()
         view.layer.cornerRadius = 22
-        view.backgroundColor = UIColor(red: 117/255, green: 219/255, blue: 27/255, alpha: 1)
+        view.backgroundColor = Colors.shared.green
         return view
     }()
     
@@ -51,55 +51,53 @@ class OrderCollectionViewCell: UICollectionViewCell {
     private let priceLabel : UILabel = {
         let label = UILabel()
          label.font = .systemFont(ofSize: 20, weight: .bold)
-         label.textColor = UIColor(red: 117/255, green: 219/255, blue: 27/255, alpha: 1)
+         label.textColor = Colors.shared.green
          return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setUI()
+        setupView()
+        setupConstraints()
     }
     
-    private func setUI() {
+    private func setupView() {
         circle.addSubview(imageView)
         self.layer.cornerRadius = 16
-        self.backgroundColor =  UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
+        self.backgroundColor =  Colors.shared.lightGray
         [circle, numberLabel, timeLabel, priceLabel].forEach { self.addSubview($0)}
-        applyConstraints()
     }
     
-    private func applyConstraints() {
-        circle.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(12)
-            make.top.equalToSuperview().offset(13)
-            make.bottom.equalToSuperview().offset(-14)
-            make.width.equalTo(43)
+    private func setupConstraints() {
+        circle.snp.makeConstraints {
+            $0.left.equalToSuperview().offset(12)
+            $0.top.equalToSuperview().offset(13)
+            $0.bottom.equalToSuperview().offset(-14)
+            $0.width.equalTo(43)
         }
         
-        imageView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.width.equalTo(24)
-            make.height.equalTo(24)
+        imageView.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.size.equalTo(24)
         }
         
-        numberLabel.snp.makeConstraints { make in
-            make.left.equalTo(circle.snp.right).offset(8)
-            make.top.equalToSuperview().offset(15)
+        numberLabel.snp.makeConstraints {
+            $0.left.equalTo(circle.snp.right).offset(8)
+            $0.top.equalToSuperview().offset(15)
         }
         
-        timeLabel.snp.makeConstraints { make in
-            make.left.equalTo(circle.snp.right).offset(8)
-            make.top.equalTo(numberLabel.snp.bottom).offset(2)
+        timeLabel.snp.makeConstraints {
+            $0.left.equalTo(circle.snp.right).offset(8)
+            $0.top.equalTo(numberLabel.snp.bottom).offset(2)
         }
         
-        priceLabel.snp.makeConstraints { make in
-            make.right.equalToSuperview().offset(-12)
-            make.top.equalToSuperview().offset(17)
+        priceLabel.snp.makeConstraints {
+            $0.right.equalToSuperview().offset(-12)
+            $0.top.equalToSuperview().offset(17)
         }
     }
     
     required init?(coder: NSCoder) {
-        fatalError()
+        super.init(coder: coder)
     }
 }

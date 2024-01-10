@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomAlert: UIView {
+final class CustomAlert: UIView {
     
     private let imageView : UIImageView = {
        let img = UIImageView()
@@ -29,7 +29,7 @@ class CustomAlert: UIView {
     private let dateAndTimeLabel : UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16, weight: .semibold)
-        label.textColor = UIColor(red: 172/255, green: 171/255, blue: 173/255, alpha: 1)
+        label.textColor = Colors.shared.gray
         label.text = "Дата и время \(Date().formatted())"
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -41,7 +41,7 @@ class CustomAlert: UIView {
         button.setTitle("Перейти в магазин", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
-        button.backgroundColor = UIColor(red: 117/255, green: 219/255, blue: 27/255, alpha: 1)
+        button.backgroundColor = Colors.shared.green
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 16
         return button
@@ -57,13 +57,44 @@ class CustomAlert: UIView {
         layer.cornerRadius = 16
         [imageView, orderNumber, dateAndTimeLabel, goToShoppingButton].forEach { self.addSubview($0)}
         goToShoppingButton.addTarget(self, action: #selector(didTapBack), for: .touchUpInside)
-        applyConstraints()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func setupConstraints() {
+        
+        goToShoppingButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().offset(-24)
+            $0.left.right.equalToSuperview().inset(16)
+            $0.height.equalTo(54)
+        }
+        
+        imageView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(36)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(200)
+            $0.width.equalTo(163)
+        }
+        
+        orderNumber.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(imageView.snp.bottom).offset(24)
+            $0.left.right.equalToSuperview().inset(16)
+        }
+        
+        dateAndTimeLabel.snp.makeConstraints {
+            $0.top.equalTo(orderNumber.snp.bottom).offset(12)
+            $0.centerX.equalToSuperview()
+            $0.left.right.equalToSuperview().inset(16)
+        }
+    }
+}
+
+//MARK: Button functionality
+extension CustomAlert {
     @objc private func didTapBack() {
         exitController()
         CartService.shared.clearCart()
@@ -75,37 +106,6 @@ class CustomAlert: UIView {
                     tabBarController.selectedIndex = 0 // Change the index as needed to navigate to the desired tab
                 }
             }
-        }
-    }
-    
-    private func applyConstraints() {
-        
-        goToShoppingButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-24)
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
-            make.height.equalTo(54)
-        }
-        
-        imageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(36)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(200)
-            make.width.equalTo(163)
-        }
-        
-        orderNumber.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(imageView.snp.bottom).offset(24)
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
-        }
-        
-        dateAndTimeLabel.snp.makeConstraints { make in
-            make.top.equalTo(orderNumber.snp.bottom).offset(12)
-            make.centerX.equalToSuperview()
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
         }
     }
 }

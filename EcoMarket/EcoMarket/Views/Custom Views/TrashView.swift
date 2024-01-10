@@ -2,19 +2,39 @@
 //  TrashView.swift
 //  EcoMarket
 //
-//  Created by Alikhan Tangirbergen on 10.11.2023.
+//  Created by Alikhan Tangirbergen on 08.11.2023.
 //
 
 import UIKit
 
-class TrashView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+final class TrashView : UIButton {
+    
+    private let trashImageView : UIImageView = {
+        let img = UIImageView()
+        img.image = UIImage(systemName: "trash")
+        img.tintColor = .red
+        return img
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+        setupConstraints()
     }
-    */
-
+    
+    private func setupView() {
+        self.addSubview(trashImageView)
+        self.backgroundColor = .white
+        self.layer.cornerRadius = 4
+    }
+    
+    private func setupConstraints() {
+        trashImageView.snp.makeConstraints {
+            $0.left.right.top.bottom.equalToSuperview().inset(4)
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
 }
