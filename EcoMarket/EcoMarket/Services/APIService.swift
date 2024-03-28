@@ -8,55 +8,37 @@
 import Foundation
 import Alamofire
 
+enum URLs : String {
+    case categories = "https://neobook.online/ecobak/product-category-list/"
+    case products = "https://neobook.online/ecobak/product-list/"
+}
+
 final class APIService {
     static let shared = APIService()
     
-    func fetchProductCategory(handler: @escaping ([ProductCategory]) -> Void) {
-        let url = "https://neobook.online/ecobak/product-category-list/"
+    func fetchData<T: Codable>(from url : String, handler: @escaping ([T]) -> Void) {
+        AF.request(url,method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil)
+            .response { resp in
+                switch resp.result {
+                case .success(let data):
+                    if let responseData = data {
+                        do {
+                            let jsonData = try JSONDecoder().decode([T].self, from: responseData)
+                            handler(jsonData)
+                        } catch {
+                            print(error.localizedDescription)
+                        }
+                    } else {
+                        print("No data received")
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
         
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil)
-            .response { resp in
-                switch resp.result {
-                case .success(let data):
-                    if let responseData = data {
-                        do {
-                            let jsonData = try JSONDecoder().decode([ProductCategory].self, from: responseData)
-                            handler(jsonData)
-                        } catch {
-                            print(error.localizedDescription)
-                        }
-                    } else {
-                        print("No data received")
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            }
     }
     
-    func fetchAllProducts(handler: @escaping ([Product]) -> Void) {
-        let url = "https://neobook.online/ecobak/product-list/"
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil)
-            .response { resp in
-                switch resp.result {
-                case .success(let data):
-                    if let responseData = data {
-                        do {
-                            let jsonData = try JSONDecoder().decode([Product].self, from: responseData)
-                            handler(jsonData)
-                        } catch {
-                            print(error.localizedDescription)
-                        }
-                    } else {
-                        print("No data received")
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            }
-    }
-    
-    func fetchSearchingProducts(categoryName: String?, searchString: String?, handler: @escaping ([Product]) -> Void) {
+    func fetchSearching<T: Codable>(categoryName: String?, searchString: String?, handler: @escaping ([T]) -> Void) {
         let url = "https://neobook.online/ecobak/product-list/"
         
         var parameters: [String: String] = [:]
@@ -75,7 +57,7 @@ final class APIService {
                 case .success(let data):
                     if let responseData = data {
                         do {
-                            let jsonData = try JSONDecoder().decode([Product].self, from: responseData)
+                            let jsonData = try JSONDecoder().decode([T].self, from: responseData)
                             handler(jsonData)
                         } catch {
                             print(error.localizedDescription)

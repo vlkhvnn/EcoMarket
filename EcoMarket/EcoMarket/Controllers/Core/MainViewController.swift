@@ -53,10 +53,10 @@ final class MainViewController: UIViewController {
     }
     
     private func getCategories() {
-        APIService.shared.fetchProductCategory { apiData in
-            self.productCategories = apiData
-            self.productCategories.sort { $0.id < $1.id }
-            self.collectionView.reloadData()
+        APIService.shared.fetchData(from: URLs.categories.rawValue) { [weak self] apiData in
+            self?.productCategories = apiData
+            self?.productCategories.sort { $0.id < $1.id }
+            self?.collectionView.reloadData()
         }
     }
     

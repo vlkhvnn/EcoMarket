@@ -11,7 +11,7 @@ final class ProductListViewController: UIViewController {
     
     private var products = [Product]()
     
-    public var category : ProductCategory?
+    var category : ProductCategory?
     
     let sectionInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     
@@ -134,7 +134,7 @@ final class ProductListViewController: UIViewController {
     }
     
     private func setupScrollView() {
-        APIService.shared.fetchProductCategory { [weak self] apiData in
+        APIService.shared.fetchData(from: URLs.categories.rawValue) { [weak self] apiData in
             self?.productCategories = apiData
             self?.productCategories.sort { $0.id < $1.id }
             let view = CategoryScroll()
@@ -162,7 +162,7 @@ final class ProductListViewController: UIViewController {
     }
     
     private func getProduct() {
-        APIService.shared.fetchAllProducts() {[weak self] apiData in
+        APIService.shared.fetchData(from: URLs.products.rawValue) {[weak self] apiData in
             self?.products = apiData
             self?.collectionView.reloadData()
             guard let isEmpty = self?.products.isEmpty else {return}
@@ -177,7 +177,7 @@ final class ProductListViewController: UIViewController {
     }
     
     private func getSearchResult(_ text : String) {
-        APIService.shared.fetchSearchingProducts(categoryName: category?.name, searchString: text) {[weak self] apiData in
+        APIService.shared.fetchSearching(categoryName: category?.name, searchString: text) {[weak self] apiData in
             self?.products = apiData
             self?.collectionView.reloadData()
             guard let isEmpty = self?.products.isEmpty else {return}
