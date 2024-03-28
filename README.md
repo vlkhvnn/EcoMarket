@@ -1,0 +1,1 @@
+This is the iOS Application for the online store. The backend is provided by Neobis company. Users can see products available, their photo and price. The product search is also available and users can view their selected products in Cart. The orders are saved in user device using CoreData
